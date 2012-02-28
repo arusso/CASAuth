@@ -109,14 +109,16 @@ function casLogin($user, &$result) {
                         // Get username
                         $username = phpCAS::getUser();
 
-			// Verify they have access to the Wiki
-			if(!in_array($username,$CASAuth["AllowedUsers"]))
+			// If we are restricting users AND the user is not in
+			// the allowed users list, lets block the login
+			if($CASAuth["RestrictUsers"]==true 
+			   && !in_array($username,$CASAuth["AllowedUsers"]))
 			  {
-			    # redirect user to the RestrictRedirect page
-                            $wgOut->redirect($CASAuth["RestrictRedirect"]);
+			    // redirect user to the RestrictRedirect page
+			    $wgOut->redirect($CASAuth["RestrictRedirect"]);
 			    return true;
 			  }
-
+		
                         // Get MediaWiki user
                         $u = User::newFromName($username);		     
 
