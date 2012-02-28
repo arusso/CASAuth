@@ -28,7 +28,7 @@ require_once( "$IP/extensions/CASAuth/CASAuth.php" );
 casSetup();
 </pre>
 5 In the $WIKI/extensions/CASAuth/ directory, copy the CASAuthSettings.php.template file to CASAuthSettings.php and modify it for your environment.
-# You should now have working CAS authentication for your wiki!
+6 You should now have working CAS authentication for your wiki!
 
 Credits
 -------
