@@ -86,3 +86,11 @@ $CASAuth["AllowedUsers"] = false;
 #
 # Default: $CASAuth["RestrictRedirect"]="http://www.example.com";
 $CASAuth["RestrictRedirect"]="http://www.example.com";
+
+# If you dont like the uid that CAS returns (ie. it returns a number) you can
+# modify the routine below to return a customized username instead.
+#
+# Default: Returns the username, untouched
+function casNameLookup($username) {
+  return $username;
+}

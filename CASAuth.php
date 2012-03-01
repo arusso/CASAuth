@@ -107,8 +107,8 @@ function casLogin($user, &$result) {
 
 
                         // Get username
-                        $username = phpCAS::getUser();
-
+                        $username = casNameLookup(phpCAS::getUser());
+			
 			// If we are restricting users AND the user is not in
 			// the allowed users list, lets block the login
 			if($CASAuth["RestrictUsers"]==true 
@@ -121,7 +121,7 @@ function casLogin($user, &$result) {
 		
                         // Get MediaWiki user
                         $u = User::newFromName($username);		     
-
+			
                         // Create a new account if the user does not exists
                         if ($u->getID() == 0 && $CASAuth["CreateAccounts"]) {
 			  // Create the user
