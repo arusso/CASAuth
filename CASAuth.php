@@ -21,11 +21,13 @@
  *   Cleaned up and bugfixed: Stefan Sundin recover89 [at] gmail [dot] com
  *   User filtering code, seperation of config and code cleanup: Aaron Russo
  *                      arusso [at] berkeley [dot] edu
+ *   Email lookup hook added: Amir Tahvildaran
+ *                      amirdt22 [at] gmail [dot] com
  */
 
 $wgExtensionCredits["other"][] = array(
         "name"        => "CASAuth",
-        "version"     => "2.0.2-ucb",
+        "version"     => "2.0.3-ucb",
         "author"      => "Ioannis Yessios, Hauke Pribnow, Aaron Russo",
         "url"         => "https://github.com/arusso23/CASAuth",
         "description" => "Overrides MediaWiki's Authentication and implements Central Authentication Service (CAS) Authentication.  Original url: http://www.mediawiki.org/wiki/Extension:CASAuthentication"
@@ -41,7 +43,7 @@ $CASAuth = array(
         "LogoutServers"  => false,
         "Port"           => 443,
         "Url"            => "/cas/",
-        "Version"        => "2.0",
+        "Version"        => "2.0.3-ucb",
         "CreateAccounts" => false,     
         "PwdSecret"      => "Secret",
 
