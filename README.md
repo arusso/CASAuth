@@ -23,10 +23,10 @@ Assuming a working CAS system, installation should take under 15 minutes.  Assum
 2 Download this source code into that directory<br />
 3 Download the [https://wiki.jasig.org/display/CASC/phpCAS phpCAS] extension and extract it to the folder $WIKI/extensions/CASAuth/CAS/<br />
 4 Add the following lines to your LocalSettings.php
-<pre>
+```php
 require_once( "$IP/extensions/CASAuth/CASAuth.php" );
 casSetup();
-</pre>
+```
 5 In the $WIKI/extensions/CASAuth/ directory, copy the CASAuthSettings.php.template file to CASAuthSettings.php and modify it for your environment.<br />
 6 You should now have working CAS authentication for your wiki!<br />
 

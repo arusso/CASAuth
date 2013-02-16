@@ -94,3 +94,12 @@ $CASAuth["RestrictRedirect"]="http://www.example.com";
 function casNameLookup($username) {
   return $username;
 }
+
+# If your users aren't all on the same email domain you can
+# modify the routine below to return their email address
+#
+# Default: Returns $username@EmailDomain
+function casEmailLookup($username) {
+  return $username."@".$CASAuth["EmailDomain"];
+}
+
