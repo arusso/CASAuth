@@ -99,7 +99,7 @@ function casNameLookup($username) {
 # modify the routine below to return their email address
 #
 # Default: Returns $username@EmailDomain
-function casNameLookup($username) {
+function casEmailLookup($username) {
   return $username."@".$CASAuth["EmailDomain"];
 }
 
