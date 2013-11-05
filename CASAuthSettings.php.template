@@ -100,6 +100,7 @@ function casNameLookup($username) {
 #
 # Default: Returns $username@EmailDomain
 function casEmailLookup($username) {
+  global $CASAuth;
   return $username."@".$CASAuth["EmailDomain"];
 }
 
